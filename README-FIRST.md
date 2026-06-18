@@ -1,3 +1,33 @@
+VOORHEESVILLE ELECTRIC — VERSION 6 FINAL
+
+This package is ready for GitHub upload.
+
+Requested changes included:
+- Locked the logo-anchored VE purple palette.
+- Reduced the oversized hero headline and improved spacing.
+- Removed the redundant About page.
+- Removed the redundant Service Area page.
+- Removed About and Service Area from navigation and footer.
+- Rewrote Ryan's story to show aptitude without mentioning helping other students.
+- Kept the Projects page as the main proof/gallery page.
+- Added BRAND-PALETTE-LOCKED.md for future reference.
+
+Upload steps:
+1. Download this ZIP.
+2. Right-click the ZIP and choose Extract All.
+3. Open the extracted folder.
+4. Select everything inside the folder.
+5. In GitHub, open the website_dev repository.
+6. Click Add file → Upload files.
+7. Drag all selected files into GitHub.
+8. Commit message: Upload Version 6 final edits.
+9. Click Commit changes.
+10. Netlify should publish automatically.
+
+Important:
+Do not touch Wix DNS until the Netlify preview is reviewed and approved.
+
+
 VOORHEESVILLE ELECTRIC — VERSION 5 FINAL
 
 This package is ready for GitHub upload.

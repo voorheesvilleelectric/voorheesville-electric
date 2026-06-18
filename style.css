@@ -275,3 +275,55 @@ section{padding:92px 22px}
     padding-top:18px;
   }
 }
+
+
+/* Version 6 requested edits: locked brand palette, simpler nav, tighter hero */
+:root{
+  --purple:#8423BD;
+  --purple-dark:#6F1AA8;
+  --purple-soft:#F2E8FA;
+  --purple-tint:#C9A1E8;
+  --ink:#171A24;
+  --muted:#5E6472;
+  --line:#E9E3F0;
+  --paper:#FFFFFF;
+  --charcoal:#0B1020;
+  --soft:#FAFAFC;
+  --shadow:0 20px 60px rgba(23,26,36,.10);
+  --shadow-purple:0 12px 30px rgba(132,35,189,.18);
+  --radius:20px;
+  --max:1180px;
+}
+.links{gap:30px}
+.hero{min-height:590px}
+.hero-copy{max-width:590px}
+.hero h1{
+  font-size:clamp(2.55rem,5.2vw,4.95rem);
+  line-height:1.02;
+  letter-spacing:-.05em;
+  margin-bottom:20px;
+}
+.hero .eyebrow{margin-bottom:12px}
+.hero p{font-size:1.14rem;max-width:540px}
+.hero-actions{margin-top:26px}
+.trustbar{margin-top:-40px}
+@media (max-width:980px){
+  .links{gap:0}
+  .hero h1{font-size:clamp(2.25rem,9vw,4rem)}
+}
+@media (max-width:640px){
+  .hero{min-height:480px}
+  .hero h1{
+    font-size:clamp(2rem,10.4vw,3.05rem);
+    line-height:1.03;
+    margin-bottom:16px;
+  }
+  .hero .eyebrow{
+    font-size:.7rem;
+    letter-spacing:.17em;
+  }
+  .hero p{
+    font-size:.96rem;
+    line-height:1.42;
+  }
+}
