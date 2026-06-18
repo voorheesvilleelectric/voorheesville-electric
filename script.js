@@ -34,26 +34,48 @@ function imgThumb(img){
   return `<button class="thumb" type="button" data-full="${img.src}" aria-label="Open image"><img src="${img.src}" alt="${img.alt || ''}"></button>`;
 }
 
+function detailsButton(p, i){
+  const hasDetails = (p.before && p.before.length) || (p.after && p.after.length) || (p.videos && p.videos.length);
+  return hasDetails ? `<button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-${i}">View Details</button>` : '';
+}
+
+function detailPanel(p, i){
+  const before = p.before?.length ? `<div><h4>Before</h4><div class="gallery-row">${p.before.map(imgThumb).join('')}</div></div>` : '';
+  const after = p.after?.length ? `<div><h4>After</h4><div class="gallery-row">${p.after.map(imgThumb).join('')}</div></div>` : '';
+  const videos = p.videos?.length ? `<div class="video-list">${p.videos.map(v => `<div class="video-card"><video controls preload="metadata" poster="${v.poster}"><source src="${v.src}" type="video/mp4"></video></div>`).join('')}</div>` : '';
+  if(!before && !after && !videos) return '';
+  return `<div class="project-details" id="project-details-${i}" hidden>${(before || after) ? `<div class="ba">${before}${after}</div>` : ''}${videos}</div>`;
+}
+
 function renderProjectCards(projects, category='All'){
   const holder = $('#projectsGrid');
   if(!holder) return;
   const filtered = category === 'All' ? projects : projects.filter(p => p.category === category);
-  holder.innerHTML = filtered.map(p => `
+  holder.innerHTML = filtered.map((p,i) => `
     <article class="project" data-category="${p.category}">
       <div class="project-hero"><img src="${firstImage(p)}" alt="${p.title}"><span class="badge">${p.category}</span></div>
       <div class="project-body">
         <h3>${p.title}</h3>
         <p><strong>${p.location}</strong></p>
         <p>${p.summary}</p>
-        ${p.before || p.after ? `<div class="ba">
-          ${p.before ? `<div><h4>Before</h4><div class="gallery-row">${p.before.map(imgThumb).join('')}</div></div>` : ''}
-          ${p.after ? `<div><h4>After</h4><div class="gallery-row">${p.after.map(imgThumb).join('')}</div></div>` : ''}
-        </div>` : ''}
-        ${p.videos ? p.videos.map(v => `<div class="video-card"><video controls preload="metadata" poster="${v.poster}"><source src="${v.src}" type="video/mp4"></video></div>`).join('') : ''}
+        ${detailsButton(p,i)}
+        ${detailPanel(p,i)}
       </div>
     </article>
   `).join('');
+  bindProjectDetails();
   bindLightbox();
+}
+
+function bindProjectDetails(){
+  $$('.project-toggle').forEach(btn => btn.addEventListener('click', () => {
+    const details = document.getElementById(btn.getAttribute('aria-controls'));
+    if(!details) return;
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    details.hidden = open;
+    btn.textContent = open ? 'View Details' : 'Hide Details';
+  }));
 }
 
 function renderFilters(projects){

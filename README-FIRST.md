@@ -1,3 +1,35 @@
+VOORHEESVILLE ELECTRIC — VERSION 5 FINAL
+
+This package is ready for GitHub upload.
+
+Final polish included:
+- Logo-anchored purple palette using #8423BD
+- Cleaner, more consistent purple system across buttons, filters, links, footer, and CTA sections
+- Improved hero contrast/readability on desktop and mobile
+- Tighter mobile spacing
+- Cleaner footer/CTA flow
+- Removed redundant visual noise from earlier versions
+
+FAST UPLOAD STEPS:
+1. Download this ZIP.
+2. Right-click the ZIP and choose Extract All.
+3. Open the extracted folder.
+4. Select everything inside the folder.
+5. In GitHub, open the website_dev repository.
+6. Click Add file → Upload files.
+7. Drag all selected files into GitHub.
+8. Commit message: Upload Version 5 final polish.
+9. Click Commit changes.
+10. Netlify should publish automatically.
+
+Do not change Wix DNS until the Netlify preview is reviewed and approved.
+
+
+VERSION 5 UPDATE
+- Palette refreshed to match logo purple (#8423BD)
+- Purple system simplified and standardized across the site
+- Buttons, top bar, dark CTA, footer, filters, and accents aligned to the brand anchor
+
 # Voorheesville Electric — Version 3 Website
 
 This is the upgraded professional version of the Voorheesville Electric website.
@@ -60,3 +92,11 @@ He will be able to update:
 ## Notes
 
 Do not connect the final domain until this version is tested and approved.
+
+
+## Version 4 Cleanup
+- Removed internal customer-facing notes.
+- Simplified project cards with expandable details.
+- Reduced repeated calls-to-action in the footer.
+- Cleaned up mobile top contact bar.
+- Tightened spacing for mobile review before domain launch.
