@@ -39,12 +39,36 @@ function detailsButton(p, i){
   return hasDetails ? `<button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-${i}">View Details</button>` : '';
 }
 
+function comparePhoto(img, label){
+  if(!img) return `<div class="compare-empty">No ${label.toLowerCase()} photo</div>`;
+  return `<button class="compare-photo" type="button" data-full="${img.src}" aria-label="Open ${label} image"><img src="${img.src}" alt="${img.alt || label}"></button>`;
+}
+
 function detailPanel(p, i){
-  const before = p.before?.length ? `<div><h4>Before</h4><div class="gallery-row">${p.before.map(imgThumb).join('')}</div></div>` : '';
-  const after = p.after?.length ? `<div><h4>After</h4><div class="gallery-row">${p.after.map(imgThumb).join('')}</div></div>` : '';
-  const videos = p.videos?.length ? `<div class="video-list">${p.videos.map(v => `<div class="video-card"><video controls preload="metadata" poster="${v.poster}"><source src="${v.src}" type="video/mp4"></video></div>`).join('')}</div>` : '';
-  if(!before && !after && !videos) return '';
-  return `<div class="project-details" id="project-details-${i}" hidden>${(before || after) ? `<div class="ba">${before}${after}</div>` : ''}${videos}</div>`;
+  const before = p.before || [];
+  const after = p.after || [];
+  const videos = p.videos || [];
+  const pairCount = Math.max(before.length, after.length);
+  let comparisons = '';
+
+  if(pairCount){
+    comparisons = `<div class="compare-wrap">
+      ${Array.from({length: pairCount}).map((_, idx) => `
+        <div class="compare-set">
+          <div class="compare-col"><h4>Before</h4>${comparePhoto(before[idx], 'Before')}</div>
+          <div class="compare-col"><h4>After</h4>${comparePhoto(after[idx], 'After')}</div>
+        </div>
+      `).join('')}
+    </div>`;
+  }
+
+  const videoBlock = videos.length ? `<div class="video-list">
+    <h4>Jobsite Video</h4>
+    ${videos.map(v => `<div class="video-card"><video controls preload="metadata" poster="${v.poster}"><source src="${v.src}" type="video/mp4"></video></div>`).join('')}
+  </div>` : '';
+
+  if(!comparisons && !videoBlock) return '';
+  return `<div class="project-details" id="project-details-${i}" hidden>${comparisons}${videoBlock}</div>`;
 }
 
 function renderProjectCards(projects, category='All'){
@@ -94,7 +118,7 @@ function renderFilters(projects){
 function bindLightbox(){
   const lb = $('#lightbox');
   if(!lb) return;
-  $$('.thumb').forEach(btn => btn.addEventListener('click', () => {
+  $$('.thumb, .compare-photo').forEach(btn => btn.addEventListener('click', () => {
     $('#lightboxImg').src = btn.dataset.full;
     lb.classList.add('open');
   }));

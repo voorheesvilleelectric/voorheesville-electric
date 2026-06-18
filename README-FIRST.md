@@ -1,3 +1,39 @@
+VOORHEESVILLE ELECTRIC — VERSION 7 DEEP-DIVE REVIEW
+
+This package is ready for GitHub upload.
+
+Requested changes included:
+- Removed “Shortly after his father's heart attack” from Ryan's story.
+- Removed CONTACT from the top navigation and kept REQUEST SERVICE as the single action.
+- Improved the Services page CTA so it no longer looks like an internal placeholder.
+- Reduced the excessive Services page spacing by about half.
+- Rebuilt Projects “View Details” so before/after photos are paired in synchronized comparison rows.
+- Cleaned up the Request Service form wording and removed public Netlify tech language.
+- Added a thank-you page for form submissions.
+- Kept the logo-based VE purple palette locked.
+
+FORM DELIVERY NOTE:
+The form uses Netlify Forms. Submissions will appear in Netlify under:
+Site → Forms → service-request
+
+Netlify does NOT automatically email submissions to info@voorheesvilleelectric.com unless notifications are turned on.
+To enable that:
+Netlify → Site → Forms → Form notifications → Add notification → Email notification → info@voorheesvilleelectric.com
+
+Upload steps:
+1. Download this ZIP.
+2. Extract All.
+3. Open the extracted folder.
+4. Select everything inside.
+5. GitHub → Add file → Upload files.
+6. Drag everything in.
+7. Commit message: Upload Version 7 deep dive.
+8. Click Commit changes.
+9. Wait for Netlify to publish.
+
+Do not touch Wix DNS until the Netlify preview is reviewed and approved.
+
+
 VOORHEESVILLE ELECTRIC — VERSION 6 FINAL
 
 This package is ready for GitHub upload.
