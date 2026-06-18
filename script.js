@@ -1,0 +1,1 @@
+let idx=0;function move(n){const s=document.querySelector('.slides');if(!s)return;const total=s.children.length;idx=(idx+n+total)%total;s.style.transform=`translateX(-${idx*100}%)`}setInterval(()=>move(1),5000);
