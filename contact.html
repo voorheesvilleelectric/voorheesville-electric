@@ -1,1 +1,80 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact | Voorheesville Electric, LLC</title><meta name="description" content="Voorheesville Electric, LLC provides residential and commercial electrical services in Voorheesville and the Capital Region."><link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet"></head><body><div class="top"><div class="bar"><div>Proudly Serving Voorheesville and the Capital Region</div><div>☎ 518.765.0069 &nbsp;&nbsp; ✉ info@voorheesvilleelectric.com</div></div></div><header class="hdr"><nav class="nav"><a class="brand" href="index.html"><img src="assets/images/logo.png" alt="Voorheesville Electric logo"><div><b>VOORHEESVILLE</b><span>ELECTRIC, LLC</span></div></a><div class="links"><a href="index.html">HOME</a><a href="services.html">SERVICES</a><a href="projects.html">PROJECTS</a><a href="service-area.html">SERVICE AREA</a><a href="about.html">ABOUT</a><a href="contact.html">CONTACT</a><a class="btn" href="contact.html">REQUEST SERVICE</a></div><div class="mobile">☰</div></nav></header><main><section class="pagehead"><div class="wrap"><div class="eyebrow">Contact</div><h1>Request Electrical Service</h1><p>Tell us what you need and we will follow up.</p></div></section><section class="soft"><div class="wrap grid"><div><h2>Contact Information</h2><p><b>Phone:</b> 518.765.0069</p><p><b>Email:</b> info@voorheesvilleelectric.com</p><p><b>Service Area:</b> Voorheesville and the Capital Region</p></div><form class="contactbox form" name="service-request" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="service-request"><label>Name<input name="name" required></label><label>Phone<input name="phone" required></label><label>Email<input name="email" type="email"></label><label>Service Needed<textarea name="message" required></textarea></label><button class="btn" type="submit">Send Request</button></form></div></section></main><footer class="foot"><div class="wrap"><div><h3>Voorheesville Electric, LLC</h3><p>Your local electrician for residential and commercial service.</p></div><div><p><b>Call:</b> 518.765.0069<br><b>Email:</b> info@voorheesvilleelectric.com<br><b>Service Area:</b> Voorheesville & Capital Region</p></div></div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact Voorheesville Electric</title>
+  <meta name="description" content="Request electrical service from Voorheesville Electric, LLC.">
+  <link rel="canonical" href="https://www.voorheesvilleelectric.com/contact.html">
+  <meta property="og:title" content="Contact Voorheesville Electric">
+  <meta property="og:description" content="Request electrical service from Voorheesville Electric, LLC.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.voorheesvilleelectric.com/assets/images/hero-van.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><div>Proudly Serving Voorheesville and the Capital Region</div><div>☎ <a href="tel:+15187650069">518.765.0069</a> &nbsp;&nbsp; ✉ <a href="mailto:info@voorheesvilleelectric.com">info@voorheesvilleelectric.com</a></div></div></div>
+  <header class="header">
+    <nav class="nav">
+      <a class="brand" href="index.html" aria-label="Voorheesville Electric Home">
+        <img src="assets/images/logo.png" alt="Voorheesville Electric logo">
+        <div><strong>VOORHEESVILLE</strong><span>ELECTRIC, LLC</span></div>
+      </a>
+      <div class="links"><a href="index.html">HOME</a><a href="services.html">SERVICES</a><a href="projects.html">PROJECTS</a><a href="service-area.html">SERVICE AREA</a><a href="about.html">ABOUT</a><a href="contact.html">CONTACT</a><a class="btn" href="contact.html">REQUEST SERVICE</a></div>
+      <button class="menu" type="button" aria-label="Open menu">☰</button>
+    </nav>
+  </header>
+  <main>
+<section class="pagehead"><div class="wrap"><div class="eyebrow">Contact</div><h1>Request electrical service.</h1><p>Call Voorheesville Electric or send a message with details about the job.</p></div></section>
+<section><div class="wrap grid">
+  <div>
+    <h2>Tell us what you need.</h2>
+    <p>Use this form for residential, commercial, troubleshooting, service upgrades, lighting, outdoor electrical, and new construction inquiries.</p>
+    <div class="card"><h3>Contact Information</h3><p><b>Phone:</b> <a href="tel:+15187650069">518.765.0069</a></p><p><b>Email:</b> <a href="mailto:info@voorheesvilleelectric.com">info@voorheesvilleelectric.com</a></p><p><b>Service Area:</b> Voorheesville and the Capital Region</p></div>
+  </div>
+  <form class="formbox" name="service-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="service-request">
+    <p style="display:none"><label>Do not fill this out <input name="bot-field"></label></p>
+    <label>Name<input name="name" required></label>
+    <label>Phone<input name="phone" required></label>
+    <label>Email<input name="email" type="email"></label>
+    <label>Address / Town<input name="address"></label>
+    <label>Service Needed<select name="service"><option>Residential Electrical</option><option>Commercial Electrical</option><option>Panel / Service Upgrade</option><option>Troubleshooting / Repair</option><option>Outdoor Electrical</option><option>New Construction / Renovation</option><option>Other</option></select></label>
+    <label>Message<textarea name="message" required placeholder="Briefly describe the job..."></textarea></label>
+    <button class="btn" type="submit">Send Request</button>
+    <p class="fineprint">This form is powered by Netlify Forms once the site is live on Netlify.</p>
+  </form>
+</div></section>
+</main>
+  <footer class="footer">
+    <div class="wrap">
+      <div>
+        <img src="assets/images/logo.png" alt="Voorheesville Electric logo">
+        <h3>Voorheesville Electric, LLC</h3>
+        <p>Your local electrician for residential and commercial electrical service throughout Voorheesville and the Capital Region.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><b>Call:</b> <a href="tel:+15187650069">518.765.0069</a><br><b>Email:</b> <a href="mailto:info@voorheesvilleelectric.com">info@voorheesvilleelectric.com</a></p>
+        <p><a class="btn" href="contact.html">Request Service</a></p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <div class="footlinks">
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="service-area.html">Service Area</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap copyright">© 2026 Voorheesville Electric, LLC. All rights reserved.</div>
+  </footer>
+  <div class="lightbox" id="lightbox"><button id="lightboxClose" type="button" aria-label="Close image">×</button><img id="lightboxImg" alt="Project photo enlarged"></div>
+  <script src="script.js"></script>
+</body>
+</html>

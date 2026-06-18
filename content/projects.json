@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "title": "98 Willow Service Upgrade",
+      "category": "Service Upgrade",
+      "location": "Voorheesville / Capital Region",
+      "summary": "Before-and-after residential service upgrade with updated exterior service equipment and a clean, modern interior panel installation.",
+      "featured": true,
+      "before": [
+        {"src": "assets/images/projects/98-willow-before-1.jpg", "alt": "Older exterior service equipment before replacement"},
+        {"src": "assets/images/projects/98-willow-before-2.jpg", "alt": "Older interior electrical panel before replacement"}
+      ],
+      "after": [
+        {"src": "assets/images/projects/98-willow-after-1.jpg", "alt": "Updated exterior service equipment after installation"},
+        {"src": "assets/images/projects/98-willow-after-2.jpg", "alt": "Clean new electrical panel after service upgrade"}
+      ]
+    },
+    {
+      "title": "Residential Panel Installation",
+      "category": "Panel Work",
+      "location": "Capital Region",
+      "summary": "Clean residential panel work with organized circuits, labeled breakers, and service-focused workmanship.",
+      "featured": true,
+      "after": [
+        {"src": "assets/images/projects/catherine-panel-final.jpg", "alt": "Completed residential electrical panel installation"},
+        {"src": "assets/images/projects/155-panel-after.jpg", "alt": "Finished electrical panel installation"}
+      ],
+      "videos": [
+        {"src": "assets/videos/155-before.mp4", "poster": "assets/images/projects/155-before-poster.jpg", "label": "Before walkthrough"}
+      ]
+    },
+    {
+      "title": "Exterior Service Rebuild",
+      "category": "Service Equipment",
+      "location": "Capital Region",
+      "summary": "Exterior meter and conduit work completed with a neat, professional finish and improved service layout.",
+      "featured": true,
+      "before": [
+        {"src": "assets/images/projects/junction-before.jpg", "alt": "Exterior service area before work"}
+      ],
+      "after": [
+        {"src": "assets/images/projects/junction-after-1.jpg", "alt": "Exterior service equipment after upgrade"},
+        {"src": "assets/images/projects/junction-after-2.jpg", "alt": "Completed conduit and meter work"}
+      ],
+      "videos": [
+        {"src": "assets/videos/conduit-run.mp4", "poster": "assets/images/projects/conduit-run-poster.jpg", "label": "Conduit run walkthrough"}
+      ]
+    },
+    {
+      "title": "Hot Tub Electrical Hookup",
+      "category": "Outdoor Electrical",
+      "location": "Capital Region",
+      "summary": "Outdoor electrical installation for a hot tub area with clean conduit routing and protected equipment placement.",
+      "featured": false,
+      "after": [
+        {"src": "assets/images/projects/hot-tub-circuit.jpg", "alt": "Outdoor hot tub electrical installation"}
+      ]
+    }
+  ]
+}

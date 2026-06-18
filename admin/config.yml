@@ -1,31 +1,65 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "uploads"
-public_folder: "/uploads"
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
 collections:
-  - name: "pages"
-    label: "Website Pages"
+  - name: "settings"
+    label: "Site Settings"
     files:
-      - label: "Home Page"
-        name: "home"
-        file: "content/home.yml"
+      - label: "Main Site Content"
+        name: "site"
+        file: "content/site.json"
+        format: "json"
         fields:
-          - {label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string"}
-          - {label: "Hero Headline", name: "hero_headline", widget: "string"}
-          - {label: "Hero Text", name: "hero_text", widget: "text"}
-      - label: "About Page"
-        name: "about"
-        file: "content/about.yml"
+          - {label: "Company Name", name: "companyName", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Hero Title", name: "heroTitle", widget: "string"}
+          - {label: "Hero Text", name: "heroText", widget: "text"}
+          - {label: "About Headline", name: "aboutHeadline", widget: "string"}
+          - {label: "About Story", name: "aboutStory", widget: "text"}
+          - {label: "Mission", name: "mission", widget: "text"}
+          - {label: "Service Area Intro", name: "serviceAreaIntro", widget: "text"}
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "content/testimonials.json"
+        format: "json"
         fields:
-          - {label: "Headline", name: "headline", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-  - name: "projects"
-    label: "Project Photos"
-    folder: "content/projects"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Project Title", name: "title", widget: "string"}
-      - {label: "Photo", name: "image", widget: "image"}
-      - {label: "Description", name: "description", widget: "text", required: false}
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - {label: "Quote", name: "quote", widget: "text"}
+              - {label: "Name", name: "name", widget: "string"}
+      - label: "Projects"
+        name: "projects"
+        file: "content/projects.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Category", name: "category", widget: "select", options: ["Service Upgrade", "Panel Work", "Service Equipment", "Outdoor Electrical", "Residential", "Commercial", "Lighting", "Troubleshooting"]}
+              - {label: "Location", name: "location", widget: "string", required: false}
+              - {label: "Summary", name: "summary", widget: "text"}
+              - {label: "Featured on Home Page", name: "featured", widget: "boolean", default: false}
+              - label: "Before Photos"
+                name: "before"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Photo", name: "src", widget: "image"}
+                  - {label: "Alt Text", name: "alt", widget: "string", required: false}
+              - label: "After Photos"
+                name: "after"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Photo", name: "src", widget: "image"}
+                  - {label: "Alt Text", name: "alt", widget: "string", required: false}

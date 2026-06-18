@@ -1,38 +1,62 @@
-# Voorheesville Electric Website
+# Voorheesville Electric — Version 3 Website
 
-This is a professional multi-page website for Voorheesville Electric, LLC.
+This is the upgraded professional version of the Voorheesville Electric website.
 
-## Pages included
-- Home
-- Services
-- Projects / completed job photo carousel
-- Service Area
-- About
-- Contact / service request form
+## What is included
 
-## Free editable setup
-Recommended free app: Netlify + Decap CMS.
+- Home page
+- Services page
+- Projects / completed work gallery
+- Service Area page
+- About page with Ryan's story
+- Contact page with Netlify service request form
+- Real project photos from uploaded job files
+- Before/after project gallery
+- Video support for job walkthrough clips
+- Decap CMS admin foundation at `/admin`
+- Netlify configuration
+- SEO basics: page titles, descriptions, robots.txt, sitemap.xml
 
-1. Create a free GitHub account if needed.
-2. Create a new GitHub repository named `voorheesville-electric-site`.
-3. Upload all files from this folder to that repository.
-4. Create a free Netlify account.
-5. In Netlify, choose **Add new site > Import an existing project**.
-6. Connect the GitHub repository.
-7. Build command: leave blank.
-8. Publish directory: `.`
-9. Deploy the site.
-10. In Netlify, enable **Identity**.
-11. Enable **Git Gateway**.
-12. Invite Ryan as a user under Identity.
-13. Ryan edits the website at: `https://your-site-name.netlify.app/admin`
+## Current recommended workflow
 
-## Updating photos
-Project photos can be edited through `/admin` once Netlify Identity and Git Gateway are enabled. You can also manually replace images in `assets/images` or add photos to `uploads`.
+Keep the real domain pointed to Wix for now.
 
-## Wix transfer notes
-After the Netlify site is live:
-1. Log into Wix and find the domain settings for voorheesvilleelectric.com.
-2. Point the domain DNS records to Netlify using Netlify's domain instructions.
-3. Keep Wix active until the new site is verified live.
-4. Once the Netlify site is fully working, cancel the Wix website plan only after confirming the domain/email are not tied to that billing.
+Use the Netlify temporary domain to test this site until everything looks right.
+
+When ready, connect `www.voorheesvilleelectric.com` to Netlify.
+
+## How to upload this version to GitHub
+
+1. Download this ZIP.
+2. Right-click the ZIP and choose **Extract All**.
+3. Open the extracted folder.
+4. Select all files and folders inside it.
+5. Go to the GitHub repository: `website_dev`.
+6. Click **Add file**.
+7. Click **Upload files**.
+8. Drag the extracted contents into GitHub.
+9. If GitHub asks whether to replace files, allow it.
+10. Scroll down.
+11. Commit message: `Upload Version 3 website`
+12. Click **Commit changes**.
+13. Netlify should automatically deploy the update.
+
+Important: upload the folder contents, not the ZIP file itself.
+
+## Ryan editing plan
+
+Once Netlify Identity and Git Gateway are enabled, Ryan can edit content at:
+
+`https://your-netlify-site.netlify.app/admin`
+
+He will be able to update:
+
+- Project photos
+- Project captions
+- Featured projects
+- Testimonials
+- General site text
+
+## Notes
+
+Do not connect the final domain until this version is tested and approved.
