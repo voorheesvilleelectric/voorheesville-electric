@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="topbar"><div class="wrap"><div>Proudly Serving Voorheesville and the Capital Region</div><div class="top-contact"><a href="tel:+15187650069">Call 518.765.0069</a><span class="top-email"><a href="mailto:info@voorheesvilleelectric.com">info@voorheesvilleelectric.com</a></span></div></div></div>
+  <div class="topbar"><div class="wrap"><div>Proudly Serving Voorheesville and the Capital Region</div><div class="top-contact"><a href="tel:+15187650069">Call 518.765.0069</a><span class="top-email"><a href="mailto:voorheesvilleelectric@gmail.com">voorheesvilleelectric@gmail.com</a></span></div></div></div>
   <header class="header">
     <nav class="nav">
       <a class="brand" href="index.html" aria-label="Voorheesville Electric Home">
@@ -33,9 +33,9 @@
   <div>
     <h2>Tell us what you need.</h2>
     <p>Use this form for residential, commercial, troubleshooting, service upgrades, lighting, outdoor electrical, and new construction inquiries.</p>
-    <div class="card"><h3>Contact Information</h3><p><b>Phone:</b> <a href="tel:+15187650069">518.765.0069</a></p><p><b>Email:</b> <a href="mailto:info@voorheesvilleelectric.com">info@voorheesvilleelectric.com</a></p><p><b>Service Area:</b> Voorheesville and the Capital Region</p></div>
+    <div class="card"><h3>Contact Information</h3><p><b>Phone:</b> <a href="tel:+15187650069">518.765.0069</a></p><p><b>Email:</b> <a href="mailto:voorheesvilleelectric@gmail.com">voorheesvilleelectric@gmail.com</a></p><p><b>Service Area:</b> Voorheesville and the Capital Region</p></div>
   </div>
-  <form class="formbox" name="service-request" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+  <form class="formbox" id="serviceRequestForm" name="service-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="service-request">
     <p style="display:none"><label>Do not fill this out <input name="bot-field"></label></p>
     <label>Name<input name="name" required></label>
@@ -46,6 +46,15 @@
     <label>Message<textarea name="message" required placeholder="Briefly describe the job..."></textarea></label>
     <button class="btn" type="submit">Send Request</button>
     <p class="fineprint">Prefer to call? Use <a href="tel:+15187650069">518.765.0069</a>.</p>
+
+    <div class="form-success" id="formSuccess" role="status" hidden>
+      <h3>Request received.</h3>
+      <p>Thank you. Your service request has been submitted. Voorheesville Electric will follow up as soon as possible.</p>
+    </div>
+    <div class="form-error" id="formError" role="alert" hidden>
+      <h3>Something did not submit correctly.</h3>
+      <p>Please call <a href="tel:+15187650069">518.765.0069</a> or email <a href="mailto:voorheesvilleelectric@gmail.com">voorheesvilleelectric@gmail.com</a>.</p>
+    </div>
   </form>
 </div></section>
 </main>
@@ -58,7 +67,7 @@
       </div>
       <div>
         <h3>Contact</h3>
-        <p><b>Call:</b> <a href="tel:+15187650069">518.765.0069</a><br><b>Email:</b> <a href="mailto:info@voorheesvilleelectric.com">info@voorheesvilleelectric.com</a></p>
+        <p><b>Call:</b> <a href="tel:+15187650069">518.765.0069</a><br><b>Email:</b> <a href="mailto:voorheesvilleelectric@gmail.com">voorheesvilleelectric@gmail.com</a></p>
       </div>
       <div>
         <h3>Pages</h3>

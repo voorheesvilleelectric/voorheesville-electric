@@ -144,3 +144,61 @@ function renderTestimonials(data){
     renderTestimonials(t);
   }catch(e){ console.warn('Testimonials not loaded yet.', e); }
 })();
+
+
+// Inline Netlify form submission: prevents thank-you route 404 and shows success on the same page.
+function encodeFormData(formData){
+  return new URLSearchParams(formData).toString();
+}
+
+const serviceRequestForm = document.getElementById('serviceRequestForm');
+if(serviceRequestForm){
+  serviceRequestForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const submitButton = serviceRequestForm.querySelector('button[type="submit"]');
+    const successBox = document.getElementById('formSuccess');
+    const errorBox = document.getElementById('formError');
+
+    if(successBox) successBox.hidden = true;
+    if(errorBox) errorBox.hidden = true;
+    if(submitButton){
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+    }
+
+    try{
+      const formData = new FormData(serviceRequestForm);
+      if(!formData.get('form-name')){
+        formData.append('form-name', serviceRequestForm.getAttribute('name'));
+      }
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeFormData(formData)
+      });
+
+      if(!response.ok){
+        throw new Error('Form submission failed.');
+      }
+
+      serviceRequestForm.reset();
+      if(successBox){
+        successBox.hidden = false;
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }catch(error){
+      console.warn(error);
+      if(errorBox){
+        errorBox.hidden = false;
+        errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }finally{
+      if(submitButton){
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Request';
+      }
+    }
+  });
+}

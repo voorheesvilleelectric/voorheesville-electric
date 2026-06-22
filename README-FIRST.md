@@ -1,3 +1,24 @@
+VOORHEESVILLE ELECTRIC — VERSION 9 INLINE THANK-YOU FIX
+
+This package fixes the persistent thank-you page 404 by avoiding a separate thank-you route entirely.
+
+Changes:
+- All email addresses changed to voorheesvilleelectric@gmail.com.
+- Request Service form now submits in place.
+- Customer sees “Request received” directly on the same page.
+- Added fallback error message with phone and Gmail address.
+- Kept Netlify Forms integration.
+
+Upload commit message:
+Upload Version 9 inline thank-you fix
+
+After deploy:
+1. Open Request Service.
+2. Submit a test form.
+3. Confirm the page does NOT navigate to a 404.
+4. Confirm the success message appears.
+5. In Netlify, check Forms → service-request.
+
 VOORHEESVILLE ELECTRIC — VERSION 8 THANK-YOU FIX
 
 This package fixes the Netlify thank-you page 404.
@@ -28,9 +49,9 @@ FORM DELIVERY NOTE:
 The form uses Netlify Forms. Submissions will appear in Netlify under:
 Site → Forms → service-request
 
-Netlify does NOT automatically email submissions to info@voorheesvilleelectric.com unless notifications are turned on.
+Netlify does NOT automatically email submissions to voorheesvilleelectric@gmail.com unless notifications are turned on.
 To enable that:
-Netlify → Site → Forms → Form notifications → Add notification → Email notification → info@voorheesvilleelectric.com
+Netlify → Site → Forms → Form notifications → Add notification → Email notification → voorheesvilleelectric@gmail.com
 
 Upload steps:
 1. Download this ZIP.
