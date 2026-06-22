@@ -1,3 +1,15 @@
+VOORHEESVILLE ELECTRIC — VERSION 8 THANK-YOU FIX
+
+This package fixes the Netlify thank-you page 404.
+
+Upload commit message:
+Upload Version 8 thank-you fix
+
+After deploy, test:
+https://ryanvvedev.netlify.app/thank-you/
+
+Then submit the Request Service form again.
+
 VOORHEESVILLE ELECTRIC — VERSION 7 DEEP-DIVE REVIEW
 
 This package is ready for GitHub upload.

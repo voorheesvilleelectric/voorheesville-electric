@@ -1,0 +1,3 @@
+# Thank-you page fallback routes
+/thank-you.html  /thank-you/  301
+/thanks  /thank-you/  301
