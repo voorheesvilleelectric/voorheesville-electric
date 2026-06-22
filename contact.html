@@ -16,6 +16,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Netlify Forms static blueprint: required so Netlify detects the service-request form during deploy scanning. -->
+  <form name="service-request" class="netlify-form-blueprint" method="POST" netlify data-netlify="true" netlify-honeypot="bot-field" data-netlify-honeypot="bot-field" aria-hidden="true">
+    <input type="hidden" name="form-name" value="service-request">
+    <input name="bot-field">
+    <input type="text" name="name">
+    <input type="tel" name="phone">
+    <input type="email" name="email">
+    <input type="text" name="address">
+    <select name="service"><option>Residential Electrical</option></select>
+    <textarea name="message"></textarea>
+  </form>
+
   <div class="topbar"><div class="wrap"><div>Proudly Serving Voorheesville and the Capital Region</div><div class="top-contact"><a href="tel:+15187650069">Call 518.765.0069</a><span class="top-email"><a href="mailto:voorheesvilleelectric@gmail.com">voorheesvilleelectric@gmail.com</a></span></div></div></div>
   <header class="header">
     <nav class="nav">
@@ -35,9 +47,9 @@
     <p>Use this form for residential, commercial, troubleshooting, service upgrades, lighting, outdoor electrical, and new construction inquiries.</p>
     <div class="card"><h3>Contact Information</h3><p><b>Phone:</b> <a href="tel:+15187650069">518.765.0069</a></p><p><b>Email:</b> <a href="mailto:voorheesvilleelectric@gmail.com">voorheesvilleelectric@gmail.com</a></p><p><b>Service Area:</b> Voorheesville and the Capital Region</p></div>
   </div>
-  <form class="formbox" id="serviceRequestForm" name="service-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <form class="formbox" id="serviceRequestForm" name="service-request" method="POST" netlify data-netlify="true" netlify-honeypot="bot-field" data-netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="service-request">
-    <p style="display:none"><label>Do not fill this out <input name="bot-field"></label></p>
+    <p class="bot-field"><label>Do not fill this out <input name="bot-field"></label></p>
     <label>Name<input name="name" required></label>
     <label>Phone<input name="phone" required></label>
     <label>Email<input name="email" type="email"></label>

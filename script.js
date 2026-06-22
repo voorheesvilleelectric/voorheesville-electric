@@ -173,7 +173,7 @@ if(serviceRequestForm){
         formData.append('form-name', serviceRequestForm.getAttribute('name'));
       }
 
-      const response = await fetch('/', {
+      const response = await fetch(location.pathname || '/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encodeFormData(formData)

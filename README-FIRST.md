@@ -1,3 +1,19 @@
+VOORHEESVILLE ELECTRIC — VERSION 10 NETLIFY FORM BLUEPRINT FIX
+
+This package is the direct fix for Netlify showing "Form detection is enabled" but not showing the service-request form.
+
+Upload commit message:
+Upload Version 10 Netlify form blueprint fix
+
+Critical after upload:
+Go to Netlify → Deploys → Trigger deploy → Clear cache and deploy site.
+
+Then check:
+Netlify → Forms
+
+The form should show as:
+service-request
+
 VOORHEESVILLE ELECTRIC — VERSION 9 INLINE THANK-YOU FIX
 
 This package fixes the persistent thank-you page 404 by avoiding a separate thank-you route entirely.

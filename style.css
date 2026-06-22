@@ -481,3 +481,15 @@ button[disabled]{
   opacity:.72;
   cursor:not-allowed;
 }
+
+
+/* Version 10: Netlify Forms detection blueprint */
+.netlify-form-blueprint,
+.bot-field{
+  position:absolute !important;
+  left:-10000px !important;
+  top:auto !important;
+  width:1px !important;
+  height:1px !important;
+  overflow:hidden !important;
+}
